@@ -16,5 +16,6 @@ export default function handler(req, res, next) {
     }
   }
   res.setHeader('Access-Control-Allow-Origin', '*');
-  getURI(req.body['my-url'])
+  const {u} = req.query
+  getURI(u)
 }
